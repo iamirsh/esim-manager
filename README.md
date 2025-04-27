@@ -32,25 +32,25 @@ A responsive Next.js web application for managing eSIM plans, tracking data usag
 1. Clone the repository:
 
 \`\`\`bash
-git clone https://github.com/yourusername/esim-manager.git
+git clone https://github.com/iamirsh/esim-manager.git
 cd esim-manager
 \`\`\`
 
 2. Install dependencies:
 
-\`\`\`bash
+
 npm install
 # or
 yarn install
-\`\`\`
+
 
 3. Run the development server:
 
-\`\`\`bash
+
 npm run dev
 # or
 yarn dev
-\`\`\`
+
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
@@ -108,6 +108,4 @@ The application is designed to be responsive across different screen sizes:
 - Integrate with real payment gateway
 - Add notifications for low data alerts
 
-## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
