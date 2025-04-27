@@ -2,7 +2,7 @@
 
 A responsive Next.js web application for managing eSIM plans, tracking data usage, and recharging plans.
 
-![eSIM Manager Dashboard](https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Dashboard-9u835H0BByl1XMllwPRiZgfdsaMnLg.png)
+
 
 ## Features
 
@@ -79,7 +79,7 @@ esim-manager/
 
 ### Data Flow
 
-The application uses a mock data file (`data/esimData.ts`) to simulate fetching data from an API. In a production environment, this would be replaced with actual API calls.
+The application uses a mock data file (`data/esimData.js`) to simulate fetching data from an API. In a production environment, this would be replaced with actual API calls.
 
 ### State Management
 
