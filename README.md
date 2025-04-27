@@ -1,6 +1,7 @@
 # eSIM Manager – Data Usage Tracker Web App
 
 A responsive Next.js web application for managing eSIM plans, tracking data usage, and recharging plans.
+<img width="935" alt="sss" src="https://github.com/user-attachments/assets/ac5831c1-9994-4bd5-8981-640f781300a3" />
 
 
 
@@ -58,21 +59,20 @@ yarn dev
 
 \`\`\`
 esim-manager/
-├── app/                    # Next.js App Router pages
-│   ├── page.tsx            # Home page (Booking ID entry)
-│   ├── dashboard/          # Dashboard page
-│   ├── recharge/           # Recharge page
-│   ├── layout.tsx          # Root layout with header
-│   └── globals.css         # Global styles
-├── components/             # Reusable components
-│   ├── payment-form.tsx    # Credit card payment form
-│   ├── usage-bar.tsx       # Data usage progress bar
-│   └── plan-card.tsx       # Plan selection card
-├── data/                   # Mock data
-│   └── esimData.ts         # eSIM data including plans and usage
-├── public/                 # Static assets
-├── tailwind.config.ts      # Tailwind CSS configuration
-└── README.md               # Project documentation
+├── app/                    
+│   ├── page.js          
+│   ├── dashboard/page.js       
+│   ├── recharge/ page.js         
+│   ├── layout.js         
+│   └── globals.css        
+├── components/             
+│   ├── payment-form.js   
+│   ├── usage-bar.js       
+│   └── plan-card.js     
+├── data/                   
+│   └── esimData.js        
+├── public/                 
+└── README.md             
 \`\`\`
 
 ## Implementation Notes
