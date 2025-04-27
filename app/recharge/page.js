@@ -4,28 +4,34 @@ import { useRouter } from "next/navigation"
 import { useState } from "react"
 import { esimData } from "@/data/esimData"
 import { CheckCircle } from "lucide-react"
+import PaymentForm from "@/components/payment-form"
 
 export default function Recharge() {
   const router = useRouter()
   const [selectedPlan, setSelectedPlan] = useState(null)
   const [isRecharging, setIsRecharging] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
+  const [showPayment, setShowPayment] = useState(false)
+
+  const selectedPlanData = selectedPlan ? esimData.availablePlans.find((plan) => plan.name === selectedPlan) : null
 
   const handleRecharge = () => {
     if (!selectedPlan) return
+    setShowPayment(true)
+  }
 
-    setIsRecharging(true)
+  const handlePaymentSuccess = () => {
+    setShowPayment(false)
+    setIsSuccess(true)
 
-    // Simulate API call
+    // Redirect to dashboard after success
     setTimeout(() => {
-      setIsRecharging(false)
-      setIsSuccess(true)
+      router.push("/dashboard")
+    }, 2000)
+  }
 
-      // Redirect to dashboard after success
-      setTimeout(() => {
-        router.push("/dashboard")
-      }, 2000)
-    }, 1500)
+  const handlePaymentCancel = () => {
+    setShowPayment(false)
   }
 
   return (
@@ -63,6 +69,13 @@ export default function Recharge() {
             <p className="text-gray-600">Redirecting to dashboard...</p>
           </div>
         </div>
+      ) : showPayment ? (
+        <PaymentForm
+          amount={selectedPlanData?.price || ""}
+          planName={selectedPlanData?.name || ""}
+          onSuccess={handlePaymentSuccess}
+          onCancel={handlePaymentCancel}
+        />
       ) : (
         <>
           {/* Current Plan Card */}
